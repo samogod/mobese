@@ -6,69 +6,72 @@ bred = Fore.RED + Style.BRIGHT
 red = Fore.RED
 bos = "\033[1;37m"
 z = """
-			        Version 1.0.0
-        [+] █████████████████████████████████████████████████████ [+]
-                	  Coded by github.com/samet-g\n\n
+					Version 1.0.0
+		[+] █████████████████████████████████████████████████████ [+]
+					  Coded by github.com/samet-g\n\n
 """#dont edit or change that lines and nvm this shitty cog file.
 print("""
-	    ███╗   ███╗ ██████╗ ██████╗ ███████╗███████╗███████╗
-	    ████╗ ████║██╔═══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
-	    ██╔████╔██║██║   ██║██████╔╝█████╗  ███████╗█████╗  
-	    ██║╚██╔╝██║██║   ██║██╔══██╗██╔══╝  ╚════██║██╔══╝  
-	    ██║ ╚═╝ ██║╚██████╔╝██████╔╝███████╗███████║███████╗
-	    ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
-                                                    """)
+		███╗   ███╗ ██████╗ ██████╗ ███████╗███████╗███████╗
+		████╗ ████║██╔═══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
+		██╔████╔██║██║   ██║██████╔╝█████╗  ███████╗█████╗  
+		██║╚██╔╝██║██║   ██║██╔══██╗██╔══╝  ╚════██║██╔══╝  
+		██║ ╚═╝ ██║╚██████╔╝██████╔╝███████╗███████║███████╗
+		╚═╝	 ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
+													""")
 for c in z:
-    sys.stdout.write(f"{bred}{c}")
-    sys.stdout.flush()
-    time.sleep(0.02)
+	sys.stdout.write(f"{bred}{c}")
+	sys.stdout.flush()
+	time.sleep(0.02)
 istturistik = {}
-istsehir = {"1":"http://ibb-media1.ibb.gov.tr:1935/live/223.stream/chunklist_w1088399288.m3u8", #Mecidiyeköy
-	"2":"http://ibb-media1.ibb.gov.tr:1935/live/344.stream/chunklist_w1837373499.m3u8",  #FSM Köprüsü
-	"3":"http://ibb-media4.ibb.gov.tr:1935/live/81.stream/chunklist_w660600761.m3u8",    #15 Temmuz Şehitler Köprüsü
-	"4":"http://ibb-media4.ibb.gov.tr:1935/live/43.stream/chunklist_w92679156.m3u8",     #Beşiktaş
-	"5":"http://ibb-media2.ibb.gov.tr:1935/live/711.stream/chunklist_w420425086.m3u8",   #Beykoz Çubuklu İskele
-	"6":"http://ibb-media4.ibb.gov.tr:1935/live/58.stream/chunklist_w506610889.m3u8",    #Büyükdere addesi Maslak
-	"7":"http://ibb-media1.ibb.gov.tr:1935/live/282.stream/chunklist_w1481500069.m3u8",  #Sirkeci
-	"8":"http://ibb-media4.ibb.gov.tr:1935/live/72.stream/chunklist_w1344266629.m3u8",   #Avcılar Metrobüs
-	"9":"http://ibb-media4.ibb.gov.tr:1935/live/39.stream/chunklist_w1393906349.m3u8",   #Bayrampaşa Otogar Girişi
-	"10":"http://ibb-media1.ibb.gov.tr:1935/live/201.stream/chunklist_w1783199883.m3u8", #Kadıköy Rıhtım
-	"11":"http://ibb-media1.ibb.gov.tr:1935/live/202.stream/chunklist_w2146144758.m3u8", #Kağıthane
-	"12":"http://ibb-media1.ibb.gov.tr:1935/live/289.stream/chunklist_w309117416.m3u8",  #Madenler Çamlık
-	"13":"http://ibb-media2.ibb.gov.tr:1935/live/1021.stream/chunklist_w1274393475.m3u8",#H.U Tuneli Beykoz
-	"14":"http://ibb-media2.ibb.gov.tr:1935/live/593.stream/chunklist_w297551725.m3u8",  #İstoç Arka Yol
-	"15":"http://ibb-media2.ibb.gov.tr:1935/live/1020.stream/chunklist_w1420875901.m3u8",#HalilUlukurt Tüneli Riva Girişi
-	"16":"http://ibb-media1.ibb.gov.tr:1935/live/304.stream/chunklist_w1408062503.m3u8", #Tem Altınşehir
-	"17":"http://ibb-media1.ibb.gov.tr:1935/live/302.stream/chunklist_w973107606.m3u8",  #Tem Akşamsettin
-	"18":"http://ibb-media2.ibb.gov.tr:1935/live/362.stream/playlist.m3u8", 			 #Tem Kınalı
-	"19":"http://ibb-media2.ibb.gov.tr:1935/live/391.stream/chunklist_w1374272066.m3u8", #Tem Silivri 1
-	"20":"http://ibb-media2.ibb.gov.tr:1935/live/389.stream/chunklist_w1985531252.m3u8", #Tem Silivri 2
-	"21":"http://ibb-media1.ibb.gov.tr:1935/live/312.stream/chunklist_w1213016645.m3u8", #Tem Büyükçekmece 1
-	"22":"http://ibb-media1.ibb.gov.tr:1935/live/313.stream/chunklist_w1919954792.m3u8", #Tem Büyükçekmece 2
-	"23":"http://ibb-media1.ibb.gov.tr:1935/live/314.stream/chunklist_w434090249.m3u8",  #Tem Büyükçekmece 3
-	"24":"http://ibb-media1.ibb.gov.tr:1935/live/315.stream/chunklist_w1394198385.m3u8", #Tem Büyükçekmece 4
-	"25":"http://ibb-media2.ibb.gov.tr:1935/live/426.stream/chunklist_w2075063494.m3u8", #Tem Emniyet Mah. Avrupa Yönü
-	"26":"http://ibb-media2.ibb.gov.tr:1935/live/392.stream/chunklist_w1794085287.m3u8", #Tem Tekstilkent Anadolu Yönü
-	"28":"http://ibb-media1.ibb.gov.tr:1935/live/168.stream/chunklist_w984170735.m3u8",  #D100 Beylikdüzü
-	"28":"http://ibb-media2.ibb.gov.tr:1935/live/648.stream/chunklist_w109196455.m3u8",  #Dünya Gazetesi
-	"29":"http://ibb-media4.ibb.gov.tr:1935/live/13.stream/chunklist_w779799182.m3u8",   #Atatürk Havalimanı
-	"30":"http://ibb-media1.ibb.gov.tr:1935/live/174.stream/chunklist_w1362957790.m3u8", #Bahçe Taksim
-	"31":"http://ibb-media4.ibb.gov.tr:1935/live/45.stream/chunklist_w1312528785.m3u8",  #Eyüp Feshane
-	"32":"http://ibb-media4.ibb.gov.tr:1935/live/78.stream/playlist.m3u8", 				 #D100 Hadımköy
-	"33":"http://ibb-media2.ibb.gov.tr:1935/live/610.stream/chunklist_w1120838306.m3u8", #D100 Ambarlı
-	"34":"http://ibb-media4.ibb.gov.tr:1935/live/66.stream/chunklist_w1412092558.m3u8",  #D100 Acıbadem Köprüsü
-	"35":"http://ibb-media2.ibb.gov.tr:1935/live/611.stream/chunklist_w1066611898.m3u8", #D100 Avcılar Cihangir
-	"36":"http://ibb-media2.ibb.gov.tr:1935/live/612.stream/chunklist_w1551425043.m3u8", #D100 Avcılar Şükrübey
-	"37":"http://ibb-media2.ibb.gov.tr:1935/live/631.stream/chunklist_w1972328660.m3u8", #D100 Cevizli
-	"38":"http://ibb-media4.ibb.gov.tr:1935/live/94.stream/chunklist_w412189671.m3u8",   #D100 Çobançeşme Yenibosna Yönü
-	"39":"http://ibb-media4.ibb.gov.tr:1935/live/114.stream/chunklist_w957944218.m3u8",  #Harem ido
-	"40":"http://ibb-media4.ibb.gov.tr:1935/live/112.stream/chunklist_w925818251.m3u8",  #D100 Haramidere
-	"41":"http://ibb-media2.ibb.gov.tr:1935/live/535.stream/chunklist_w1102012425.m3u8", #D100 Küçükçekmece
-	"42":"http://ibb-media4.ibb.gov.tr:1935/live/136.stream/chunklist_w1185455397.m3u8", #D100 Küçükyalı
-	"43":"http://ibb-media1.ibb.gov.tr:1935/live/161.stream/chunklist_w388377197.m3u8",  #D100 Şirinevler
-	"44":"http://ibb-media4.ibb.gov.tr:1935/live/99.stream/chunklist_w1632931541.m3u8",  #D100 Florya
+istsehir = {
+	"1":"http://ibb-media1.ibb.gov.tr:1935/live/223.stream/playlist.m3u8",	#Mecidiyeköy
+	"2":"http://ibb-media1.ibb.gov.tr:1935/live/344.stream/playlist.m3u8",	#FSM Köprüsü
+	"3":"http://ibb-media4.ibb.gov.tr:1935/live/81.stream/playlist.m3u8",	#15 Temmuz Şehitler Köprüsü
+	"4":"http://ibb-media4.ibb.gov.tr:1935/live/43.stream/playlist.m3u8",	#Beşiktaş
+	"5":"http://ibb-media2.ibb.gov.tr:1935/live/711.stream/playlist.m3u8",	#Beykoz Çubuklu İskele
+	"6":"http://ibb-media4.ibb.gov.tr:1935/live/58.stream/playlist.m3u8",	#Büyükdere addesi Maslak
+	"7":"http://ibb-media1.ibb.gov.tr:1935/live/282.stream/playlist.m3u8",	#Sirkeci
+	"8":"http://ibb-media4.ibb.gov.tr:1935/live/72.stream/playlist.m3u8",	#Avcılar Metrobüs
+	"9":"http://ibb-media4.ibb.gov.tr:1935/live/39.stream/playlist.m3u8",	#Bayrampaşa Otogar Girişi
+	"10":"http://ibb-media1.ibb.gov.tr:1935/live/201.stream/playlist.m3u8", #Kadıköy Rıhtım
+	"11":"http://ibb-media1.ibb.gov.tr:1935/live/202.stream/playlist.m3u8", #Kağıthane
+	"12":"http://ibb-media1.ibb.gov.tr:1935/live/289.stream/playlist.m3u8",	#Madenler Çamlık
+	"13":"http://ibb-media2.ibb.gov.tr:1935/live/1021.stream/playlist.m3u8",#H.U Tuneli Beykoz
+	"14":"http://ibb-media2.ibb.gov.tr:1935/live/593.stream/playlist.m3u8",	#İstoç Arka Yol
+	"15":"http://ibb-media2.ibb.gov.tr:1935/live/1020.stream/playlist.m3u8",#HalilUlukurt Tüneli Riva Girişi
+	"16":"http://ibb-media1.ibb.gov.tr:1935/live/304.stream/playlist.m3u8", #Tem Altınşehir
+	"17":"http://ibb-media1.ibb.gov.tr:1935/live/302.stream/playlist.m3u8",	#Tem Akşamsettin
+	"18":"http://ibb-media2.ibb.gov.tr:1935/live/362.stream/playlist.m3u8",	#Tem Kınalı
+	"19":"http://ibb-media2.ibb.gov.tr:1935/live/391.stream/playlist.m3u8", #Tem Silivri 1
+	"20":"http://ibb-media2.ibb.gov.tr:1935/live/389.stream/playlist.m3u8", #Tem Silivri 2
+	"21":"http://ibb-media1.ibb.gov.tr:1935/live/312.stream/playlist.m3u8", #Tem Büyükçekmece 1
+	"22":"http://ibb-media1.ibb.gov.tr:1935/live/313.stream/playlist.m3u8", #Tem Büyükçekmece 2
+	"23":"http://ibb-media1.ibb.gov.tr:1935/live/314.stream/playlist.m3u8",	#Tem Büyükçekmece 3
+	"24":"http://ibb-media1.ibb.gov.tr:1935/live/315.stream/playlist.m3u8", #Tem Büyükçekmece 4
+	"25":"http://ibb-media2.ibb.gov.tr:1935/live/426.stream/playlist.m3u8", #Tem Emniyet Mah. Avrupa Yönü
+	"26":"http://ibb-media2.ibb.gov.tr:1935/live/392.stream/playlist.m3u8", #Tem Tekstilkent Anadolu Yönü
+	"28":"http://ibb-media1.ibb.gov.tr:1935/live/168.stream/playlist.m3u8",	#D100 Beylikdüzü
+	"28":"http://ibb-media2.ibb.gov.tr:1935/live/648.stream/playlist.m3u8",	#Dünya Gazetesi
+	"29":"http://ibb-media4.ibb.gov.tr:1935/live/13.stream/playlist.m3u8",	#Atatürk Havalimanı
+	"30":"http://ibb-media1.ibb.gov.tr:1935/live/174.stream/playlist.m3u8", #Bahçe Taksim
+	"31":"http://ibb-media4.ibb.gov.tr:1935/live/45.stream/playlist.m3u8",	#Eyüp Feshane
+	"32":"http://ibb-media4.ibb.gov.tr:1935/live/78.stream/playlist.m3u8", 	#D100 Hadımköy
+	"33":"http://ibb-media2.ibb.gov.tr:1935/live/610.stream/playlist.m3u8", #D100 Ambarlı
+	"34":"http://ibb-media4.ibb.gov.tr:1935/live/66.stream/playlist.m3u8",	#D100 Acıbadem Köprüsü
+	"35":"http://ibb-media2.ibb.gov.tr:1935/live/611.stream/playlist.m3u8", #D100 Avcılar Cihangir
+	"36":"http://ibb-media2.ibb.gov.tr:1935/live/612.stream/playlist.m3u8", #D100 Avcılar Şükrübey
+	"37":"http://ibb-media2.ibb.gov.tr:1935/live/631.stream/playlist.m3u8", #D100 Cevizli
+	"38":"http://ibb-media4.ibb.gov.tr:1935/live/94.stream/playlist.m3u8",	#D100 Çobançeşme Yenibosna Yönü
+	"39":"http://ibb-media4.ibb.gov.tr:1935/live/114.stream/playlist.m3u8",	#Harem ido
+	"40":"http://ibb-media4.ibb.gov.tr:1935/live/112.stream/playlist.m3u8",	#D100 Haramidere
+	"41":"http://ibb-media2.ibb.gov.tr:1935/live/535.stream/playlist.m3u8", #D100 Küçükçekmece
+	"42":"http://ibb-media4.ibb.gov.tr:1935/live/136.stream/playlist.m3u8", #D100 Küçükyalı
+	"43":"http://ibb-media1.ibb.gov.tr:1935/live/161.stream/playlist.m3u8",	#D100 Şirinevler
+	"44":"http://ibb-media4.ibb.gov.tr:1935/live/99.stream/playlist.m3u8",	#D100 Florya
 }
-tkrdgsehir = {"1":"http://wowza.tekirdag.bel.tr:4443/sahil/sahil.stream/chunklist_w1321054680.m3u8"}
+tkrdgsehir = {
+	"1":"http://wowza.tekirdag.bel.tr:4443/sahil/sahil.stream/chunklist_w1321054680.m3u8"
+}
 konyaturistik = {
 	"1":"http://konya.sehirkameralari.com/live/540eea6d7e9f3/playlist.m3u8?wowzasessionid=899384592&token=", #Büyükşehir Stadyumu
 	"2":"http://konya.sehirkameralari.com/live/52f8ad56da5f9/playlist.m3u8?wowzasessionid=626528448&token=", #Mevlana Meydanı
@@ -190,12 +193,19 @@ izmirsehir = {
 }
 giresunshr = {
 	"1":"http://cdn-ipkamera.yayin.com.tr/giresunbel/cadde/chunklist_w1824418373.m3u8?anahtar=jO_dO3E3yYzbiItna_WVNw&sure=1629823114&ip=176.88.71.94jO_dO3E3yYzbiItna_WVNw&sure=1629823114&ip=176.88.71.94", #Gazi Caddesi
-}
-
-marmarishr = {
-	"1":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/meydan/chunklist_w588213501.m3u8?anahtar=FKcjoB4bGmHo6VozRwkPvQ&sure=1629827249&ip=176.88.71.94", #Gençlik Meydanı
-	"2":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/meydan/chunklist_w588213501.m3u8?anahtar=FKcjoB4bGmHo6VozRwkPvQ&sure=1629827249&ip=176.88.71.94", #Yat Limanı
 }'''
+
+# Source: https://wowza.yayin.com.tr/playlist/marmarisbel/playlist_marmarisbel.json & https://www.marmaris.bel.tr/?Page=marmaris-canli-yayin
+marmarishr = {
+	"1":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/meydan/playlist.m3u8", #Gençlik Meydanı
+	"2":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/yatlimani/playlist.m3u8", #Yat Limanı
+	"3":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/uzunyali/playlist.m3u8", #Uzun Yalı
+	"4":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/icmeler/playlist.m3u8", #İçmeler
+	"5":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/ataturk/playlist.m3u8", #Atatürk Bulvarı
+	"6":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/bozburun/playlist.m3u8", #Bozburun
+	"7":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/kordon1/playlist.m3u8", #Kordon Caddesi 1
+	"8":"http://cdn-ipkamera.yayin.com.tr/marmarisbel/kordon2/playlist.m3u8", #Kordon Caddesi 2
+}
 
 ordutrstk = {
 	"1":"http://frn.rtsp.me/L4tcEnc8zhF83AGZ8WO6xw/1629897906/hls/CXyFwk23.m3u8", #Akyazı Sahil
@@ -205,7 +215,7 @@ ordutrstk = {
 	"5":"http://frn.rtsp.me/c1wzh18AUoCrMLqHsF8nYw/1629898040/hls/XiWUS5Vq.m3u8", #Atatürk Parkı 2 | Ünye
 }
 ordusehir = {
-    "1":"http://frn.rtsp.me/ZwXr_uPrGLSXJDuSPoUIZw/1629897877/hls/hBLSGWRI.m3u8", #İbrahim Fırtına Bulvarı 2
+	"1":"http://frn.rtsp.me/ZwXr_uPrGLSXJDuSPoUIZw/1629897877/hls/hBLSGWRI.m3u8", #İbrahim Fırtına Bulvarı 2
 	"2":"http://frn.rtsp.me/DtrZYFjyf2mXiR15ohIOsw/1629897834/hls/Z80qG5MA.m3u8", #İbrahim Fırtına Bulvarı 3
 	"3":"http://frn.rtsp.me/wQQZ8J0j9a7vc6CElKDdmw/1629897991/hls/kjapH2iE.m3u8", #Meydan Ulubey
 	"4":"http://frn.rtsp.me/h0_SecMXZqPUawxeeKZqvA/1629897946/hls/DG6ayZs5.m3u8", #Meydan 2 Ulubey
@@ -253,45 +263,45 @@ while True:
 #1 istanbul #2 izmir 3# tekirdag 4# Konya 5# Ordu
 
 def secim():
-    if(kameraturu == 1 and sehirturu == 1):
-        return print(f"{Back.RED}[ - ]{bos} İstanbul-Turistik kameraları mevcut değil.")
-    elif(kameraturu == 1 and sehirturu ==4):
-        print(f"{bred}[ 1 ]{bos} Büyükşehir Stadyumu\n{bred}[ 2 ]{bos} Mevlana Meydanı\n{bred}[ 3 ]{bos} Zafer Meydanı Yer Saati\n{bred}[ 4 ]{bos} Eski Garaj\n{bred}[ 5 ]{bos} Alaaddin Caddesi 1\n{bred}[ 6 ]{bos} Alaaddin Caddesi 2\n{bred}[ 7 ]{bos} Mevlana Caddesi\n{bred}[ 8 ]{bos} Kılıçarslan Şehir Meydanı\n{bred}[ 9 ]{bos} Kültürpark\n{bred}[ 10 ]{bos} Kayalıpark\n{bred}[ 11 ]{bos} Büyükşehir Belediyesi\n{bred}[ 12 ]{bos} İstiklal Harbi Şehitleri Abidesi\n{bred}[ 13 ]{bos} Mevlana Kültür Merkezi")
-        kambolge = str(input())
-        secilenkamera = konyaturistik[kambolge]
-        return secilenkamera
-    elif(kameraturu == 2 and sehirturu == 1):
-        print(f"{bred}[ 1 ]{bos} Mecidiyeköy\n{bred}[ 2 ]{bos} FSM Köprüsü\n{bred}[ 3 ]{bos} 15 Temmuz Şehitler Köprüsü\n{bred}[ 4 ]{bos} Beşiktaş\n{bred}[ 5 ]{bos} Beykoz Çubuklu İskele\n{bred}[ 6 ]{bos} Maslak | Büyükdere Caddesi\n{bred}[ 7 ]{bos} Sirkeci\n{bred}[ 8 ]{bos} Avcılar Metrobüs\n{bred}[ 9 ]{bos} Bayrampaşa Otogar Girişi\n{bred}[ 10 ]{bos} Kadıköy Rıhtım\n{bred}[ 11 ]{bos} Kağıthane\n{bred}[ 12 ]{bos} Madenler Çamlık\n{bred}[ 13 ]{bos} Halil Ulukurt Tüneli\n{bred}[ 14 ]{bos} Tem Altınşehir\n{bred}[ 15 ]{bos} Tem Akşamsettin\n{bred}[ 16 ]{bos} Tem Kınalı\n{bred}[ 17 ]{bos} Tem Silivri 1\n{bred}[ 18 ]{bos} Tem Silivri 2\n{bred}[ 19 ]{bos} Tem Büyükçekmece 1\n{bred}[ 20 ]{bos} Tem Büyükçekmece 2\n{bred}[ 21 ]{bos} Tem Büyükçekmece 3\n{bred}[ 22 ]{bos} Tem Büyükçekmece 4\n{bred}[ 23 ]{bos} Tem Emniyet Mahallesi | Avrupa Yönü\n{bred}[ 24 ]{bos} Tem Tekstilkent Anadolu Yönü\n{bred}[ 25 ]{bos} D100 Beylikdüzü\n{bred}[ 26 ]{bos} Dünya Gazetesi\n{bred}[ 27 ]{bos} Atatürk Havalimanı\n{bred}[ 28 ]{bos} Bahçe Taksim\n{bred}[ 29 ]{bos} D100 Eyüp Feshane\n{bred}[ 30 ]{bos} D100 Hadımköy\n{bred}[ 31 ]{bos} D100 Ambarlı\n{bred}[ 32 ]{bos} D100 Acıbadem Köprüsü\n{bred}[ 33 ]{bos} D100 Avcılar Cihangir\n{bred}[ 34 ]{bos} D100 Avcılar Şükrübey\n{bred}[ 35 ]{bos} D100 Cevizli\n{bred}[ 36 ]{bos} D100 Çobançeşme Yenibosna Yönü\n{bred}[ 37 ]{bos} Harem ido\n{bred}[ 38 ]{bos} D100 Haramidere\n{bred}[ 39 ]{bos} D100 Küçükçekmece\n{bred}[ 40 ]{bos} D100 Küçükyalı\n{bred}[ 41 ]{bos} D100 Şirinevler\n{bred}[ 42 ]{bos} D100 Florya")
-        kambolge = str(input())
-        secilenkamera = istsehir[kambolge]
-        return secilenkamera
-    elif(kameraturu ==2 and sehirturu == 3):
-        print(f"{bred}[ 1 ]{bos} Tekirdağ Sahil")
-        kambolge = str(input())
-        secilenkamera = tkrdgsehir[kambolge]
-        return secilenkamera
-    elif(kameraturu == 2 and sehirturu == 4):
-        print(f"{bred}[ 1 ]{bos} Otogar Kavşağı\n{bred}[ 2 ]{bos} Kule Kavşağı\n{bred}[ 3 ]{bos} Sarraflar Yeraltı Çarşısı\n{bred}[ 4 ]{bos} Yeni Meram\n{bred}[ 5 ]{bos} İhsaniye Kavşağı\n{bred}[ 6 ]{bos} Kentplaza Kavşağı\n{bred}[ 7 ]{bos} Sille Kavşağı\n{bred}[ 8 ]{bos} Kılıçarslan Gençlik M.\n{bred}[ 9 ]{bos} Mevlana-Üçler Kavşağı\n{bred}[ 10 ]{bos} Hükümet Meydanı\n{bred}[ 11 ]{bos} Vatan Caddesi\n{bred}[ 12 ]{bos} Türk Yıldızları Parkı\n{bred}[ 13 ]{bos} İnce Minareli Medrese\n{bred}[ 14 ]{bos} Stadyum-Gar Kavşağı\n{bred}[ 15 ]{bos} Belh Kavşağı\n{bred}[ 16 ]{bos} Mobilyacılar Kavşağı\n{bred}[ 17 ]{bos} Galericiler Kavşağı\n{bred}[ 18 ]{bos} Karatay Medresesi\n{bred}[ 19 ]{bos} Bilim Merkezi")
-        kambolge = str(input())
-        secilenkamera = konyasehir[kambolge]
-        return secilenkamera
-    elif (kameraturu == 1 and sehirturu == 2):
-        print(f"{Back.RED}[ - ]{bos} İzmir-Turistik kameraları mevcut değil.")
-    elif (kameraturu == 1 and sehirturu == 3):
-        print(f"{Back.RED}[ - ]{bos} Tekirdağ-Turistik kameraları mevcut değil.")
-    elif(kameraturu == 2 and sehirturu ==2): #ik this print really suck :x
-        print(f"{bred}[ 1 ]{bos} Bostanlı Köprü\n{bred}[ 2 ]{bos} Bostanlı Cami\n{bred}[ 3 ]{bos} Şair Eşref Bulvarı\n{bred}[ 4 ]{bos} Cumhuriyet Meydanı\n{bred}[ 5 ]{bos} Tekel Meydanı\n{bred}[ 6 ]{bos} Çankaya\n{bred}[ 7 ]{bos} Varyant\n{bred}[ 8 ]{bos} Güzelyalı\n{bred}[ 9 ]{bos} Küçükyalı\n{bred}[ 10 ]{bos} Karataş\n{bred}[ 11 ]{bos} Göztepe\n{bred}[ 12 ]{bos} Gaziemir Migros\n{bred}[ 13 ]{bos} Gaziemir Kipa Kavşağı\n{bred}[ 14 ]{bos} Marina Kavşağı\n{bred}[ 15 ]{bos} Mustafa Kemal Sahil Bulvarı\n{bred}[ 16 ]{bos} Karya Evleri\n{bred}[ 17 ]{bos} Gündogdu Meydanı\n{bred}[ 18 ]{bos} Demirköprü\n{bred}[ 19 ]{bos} Kahramanlar Kapısı\n{bred}[ 20 ]{bos} Buca Üçkuyular Meydanı\n{bred}[ 21 ]{bos} Uçanyol\n{bred}[ 22 ]{bos} Alsancak Gar\n{bred}[ 23 ]{bos} Karşıyaka Atatürk Anıtı\n{bred}[ 24 ]{bos} Seyrek Köprü\n{bred}[ 25 ]{bos} Konak Pier\n{bred}[ 26 ]{bos} Konak Diş Hastanesi\n{bred}[ 27 ]{bos} Şirinyer Koşu Yolu\n{bred}[ 28 ]{bos} Vakıflar Kavşağı\n{bred}[ 29 ]{bos} Montrö Meydanı\n{bred}[ 30 ]{bos} Yeşildere Caddesi\n{bred}[ 31 ]{bos} Adnan Kahveci Köprüsü\n{bred}[ 32 ]{bos} İkiçeşmelik\n{bred}[ 33 ]{bos} Meslek Fabrikası\n{bred}[ 34 ]{bos} Yeni Girne Kavşağı\n{bred}[ 35 ]{bos} Şemikler\n{bred}[ 36 ]{bos} Mavişehir Giriş\n{bred}[ 37 ]{bos} Atakent Kavşağı\n{bred}[ 38 ]{bos} Çiğli İtfaiye\n{bred}[ 39 ]{bos} Ekol Hastanesi\n{bred}[ 40 ]{bos} Egekent\n{bred}[ 41 ]{bos} Ata Sanayi Girişi\n{bred}[ 42 ]{bos} Serbest Bölge\n{bred}[ 43 ]{bos} Mürselpaşa Bulvarı\n{bred}[ 44 ]{bos} Basmane Kavşağı\n{bred}[ 45 ]{bos} Karşıyaka Naldöken Köprüsü\n{bred}[ 46 ]{bos} Zübeyde Hanım Kavşağı\n{bred}[ 47 ]{bos} Soğukkuyu Kavşağı\n{bred}[ 48 ]{bos} İzmir Arena\n{bred}[ 49 ]{bos} Bahçelerarası Köprü\n{bred}[ 50 ]{bos} Balçova Kipa\n{bred}[ 51 ]{bos} Maltepe Askeri Lisesi\n{bred}[ 52 ]{bos} Narlıdere Otoban\n{bred}[ 53 ]{bos} Narlıdere Folkart\n{bred}[ 54 ]{bos} Ege-Park Kavşağı\n{bred}[ 55 ]{bos} Bahçelerarası\n{bred}[ 56 ]{bos} Mirhatpaşa Endüstri Meslek\n{bred}[ 57 ]{bos} Fahrettin Altay Kavşağı\n{bred}[ 58 ]{bos} Denizmen Kavşağı\n{bred}[ 59 ]{bos} Hıfzısıhha Kavşağı\n{bred}[ 60 ]{bos} İslam Enstitüsü\n{bred}[ 61 ]{bos} Yeşilyurt Kavşağı\n{bred}[ 62 ]{bos} Üçyol Kavşağı\n{bred}[ 63 ]{bos} Gümrük Borsa\n{bred}[ 64 ]{bos} Tınaztepe Kavşağı\n{bred}[ 65 ]{bos} Çevikbir Meydanı\n{bred}[ 66 ]{bos} Köstence Köprüsü Kavşağı\n{bred}[ 67 ]{bos} Buca Heykel Kavşağı\n{bred}[ 68 ]{bos} Şirinyer Tapu\n{bred}[ 69 ]{bos} Yeşillik Caddesi | Buca Ayrımı\n{bred}[ 70 ]{bos} Eşrefpaşa\n{bred}[ 71 ]{bos} Melez Deltası\n{bred}[ 72 ]{bos} Bornova Hükümet Konağı\n{bred}[ 73 ]{bos} Bornova Stadyum Kavşağı\n{bred}[ 74 ]{bos} Migros Kavşağı\n{bred}[ 75 ]{bos} Otogar Kavşağı")
-        kambolge = str(input())
-        secilenkamera = izmirsehir[kambolge]
-        return secilenkamera
-    elif(kameraturu == 1 and sehirturu == 5):
-        print(f"{bred}[ 1 ]{bos} Akyazı Sahil\n{bred}[ 2 ]{bos} Sahil Fatsa 2\n{bred}[ 3 ]{bos} Sahil Fatsa 3\n{bred}[ 4 ]{bos} Atatürk Parkı")
-        kambolge = str(input())
-        secilenkamera = ordutrstk[kambolge]
-        return secilenkamera
-    elif(kameraturu == 2 and sehirturu == 5):
-        print(f"{bred}[ 1 ]{bos} İbrahim Fırtına Bulvarı 2\n{bred}[ 2 ]{bos} İbrahim Fırtına Bulvarı 3\n{bred}[ 3 ]{bos} Meydan Ulubey\n{bred}[ 4 ]{bos} Meydan Ulubey 2\n{bred}[ 5 ]{bos} Kent Meydanı | Perşembe\n{bred}[ 6 ]{bos} Belediye Meydanı | Perşembe\n{bred}[ 7 ]{bos} Fidangör 1\n{bred}[ 8 ]{bos} Fidangör 2\n{bred}[ 9 ]{bos} Fidangör 3\n{bred}[ 10 ]{bos} Fidangör 4\n{bred}[ 11 ]{bos} Fidangör 5\n{bred}[ 12 ]{bos} Fidangör 6\n{bred}[ 13 ]{bos} Fidangör 7\n{bred}[ 14 ]{bos} Fidangör 8\n{bred}[ 15 ]{bos} Fidangör 9\n{bred}[ 16 ]{bos} Fidangör 10")
-        kambolge = str(input())
-        secilenkamera = ordusehir[kambolge]
-        return secilenkamera
+	if(kameraturu == 1 and sehirturu == 1):
+		return print(f"{Back.RED}[ - ]{bos} İstanbul-Turistik kameraları mevcut değil.")
+	elif(kameraturu == 1 and sehirturu ==4):
+		print(f"{bred}[ 1 ]{bos} Büyükşehir Stadyumu\n{bred}[ 2 ]{bos} Mevlana Meydanı\n{bred}[ 3 ]{bos} Zafer Meydanı Yer Saati\n{bred}[ 4 ]{bos} Eski Garaj\n{bred}[ 5 ]{bos} Alaaddin Caddesi 1\n{bred}[ 6 ]{bos} Alaaddin Caddesi 2\n{bred}[ 7 ]{bos} Mevlana Caddesi\n{bred}[ 8 ]{bos} Kılıçarslan Şehir Meydanı\n{bred}[ 9 ]{bos} Kültürpark\n{bred}[ 10 ]{bos} Kayalıpark\n{bred}[ 11 ]{bos} Büyükşehir Belediyesi\n{bred}[ 12 ]{bos} İstiklal Harbi Şehitleri Abidesi\n{bred}[ 13 ]{bos} Mevlana Kültür Merkezi")
+		kambolge = str(input())
+		secilenkamera = konyaturistik[kambolge]
+		return secilenkamera
+	elif(kameraturu == 2 and sehirturu == 1):
+		print(f"{bred}[ 1 ]{bos} Mecidiyeköy\n{bred}[ 2 ]{bos} FSM Köprüsü\n{bred}[ 3 ]{bos} 15 Temmuz Şehitler Köprüsü\n{bred}[ 4 ]{bos} Beşiktaş\n{bred}[ 5 ]{bos} Beykoz Çubuklu İskele\n{bred}[ 6 ]{bos} Maslak | Büyükdere Caddesi\n{bred}[ 7 ]{bos} Sirkeci\n{bred}[ 8 ]{bos} Avcılar Metrobüs\n{bred}[ 9 ]{bos} Bayrampaşa Otogar Girişi\n{bred}[ 10 ]{bos} Kadıköy Rıhtım\n{bred}[ 11 ]{bos} Kağıthane\n{bred}[ 12 ]{bos} Madenler Çamlık\n{bred}[ 13 ]{bos} Halil Ulukurt Tüneli\n{bred}[ 14 ]{bos} Tem Altınşehir\n{bred}[ 15 ]{bos} Tem Akşamsettin\n{bred}[ 16 ]{bos} Tem Kınalı\n{bred}[ 17 ]{bos} Tem Silivri 1\n{bred}[ 18 ]{bos} Tem Silivri 2\n{bred}[ 19 ]{bos} Tem Büyükçekmece 1\n{bred}[ 20 ]{bos} Tem Büyükçekmece 2\n{bred}[ 21 ]{bos} Tem Büyükçekmece 3\n{bred}[ 22 ]{bos} Tem Büyükçekmece 4\n{bred}[ 23 ]{bos} Tem Emniyet Mahallesi | Avrupa Yönü\n{bred}[ 24 ]{bos} Tem Tekstilkent Anadolu Yönü\n{bred}[ 25 ]{bos} D100 Beylikdüzü\n{bred}[ 26 ]{bos} Dünya Gazetesi\n{bred}[ 27 ]{bos} Atatürk Havalimanı\n{bred}[ 28 ]{bos} Bahçe Taksim\n{bred}[ 29 ]{bos} D100 Eyüp Feshane\n{bred}[ 30 ]{bos} D100 Hadımköy\n{bred}[ 31 ]{bos} D100 Ambarlı\n{bred}[ 32 ]{bos} D100 Acıbadem Köprüsü\n{bred}[ 33 ]{bos} D100 Avcılar Cihangir\n{bred}[ 34 ]{bos} D100 Avcılar Şükrübey\n{bred}[ 35 ]{bos} D100 Cevizli\n{bred}[ 36 ]{bos} D100 Çobançeşme Yenibosna Yönü\n{bred}[ 37 ]{bos} Harem ido\n{bred}[ 38 ]{bos} D100 Haramidere\n{bred}[ 39 ]{bos} D100 Küçükçekmece\n{bred}[ 40 ]{bos} D100 Küçükyalı\n{bred}[ 41 ]{bos} D100 Şirinevler\n{bred}[ 42 ]{bos} D100 Florya")
+		kambolge = str(input())
+		secilenkamera = istsehir[kambolge]
+		return secilenkamera
+	elif(kameraturu ==2 and sehirturu == 3):
+		print(f"{bred}[ 1 ]{bos} Tekirdağ Sahil")
+		kambolge = str(input())
+		secilenkamera = tkrdgsehir[kambolge]
+		return secilenkamera
+	elif(kameraturu == 2 and sehirturu == 4):
+		print(f"{bred}[ 1 ]{bos} Otogar Kavşağı\n{bred}[ 2 ]{bos} Kule Kavşağı\n{bred}[ 3 ]{bos} Sarraflar Yeraltı Çarşısı\n{bred}[ 4 ]{bos} Yeni Meram\n{bred}[ 5 ]{bos} İhsaniye Kavşağı\n{bred}[ 6 ]{bos} Kentplaza Kavşağı\n{bred}[ 7 ]{bos} Sille Kavşağı\n{bred}[ 8 ]{bos} Kılıçarslan Gençlik M.\n{bred}[ 9 ]{bos} Mevlana-Üçler Kavşağı\n{bred}[ 10 ]{bos} Hükümet Meydanı\n{bred}[ 11 ]{bos} Vatan Caddesi\n{bred}[ 12 ]{bos} Türk Yıldızları Parkı\n{bred}[ 13 ]{bos} İnce Minareli Medrese\n{bred}[ 14 ]{bos} Stadyum-Gar Kavşağı\n{bred}[ 15 ]{bos} Belh Kavşağı\n{bred}[ 16 ]{bos} Mobilyacılar Kavşağı\n{bred}[ 17 ]{bos} Galericiler Kavşağı\n{bred}[ 18 ]{bos} Karatay Medresesi\n{bred}[ 19 ]{bos} Bilim Merkezi")
+		kambolge = str(input())
+		secilenkamera = konyasehir[kambolge]
+		return secilenkamera
+	elif (kameraturu == 1 and sehirturu == 2):
+		print(f"{Back.RED}[ - ]{bos} İzmir-Turistik kameraları mevcut değil.")
+	elif (kameraturu == 1 and sehirturu == 3):
+		print(f"{Back.RED}[ - ]{bos} Tekirdağ-Turistik kameraları mevcut değil.")
+	elif(kameraturu == 2 and sehirturu ==2): #ik this print really suck :x
+		print(f"{bred}[ 1 ]{bos} Bostanlı Köprü\n{bred}[ 2 ]{bos} Bostanlı Cami\n{bred}[ 3 ]{bos} Şair Eşref Bulvarı\n{bred}[ 4 ]{bos} Cumhuriyet Meydanı\n{bred}[ 5 ]{bos} Tekel Meydanı\n{bred}[ 6 ]{bos} Çankaya\n{bred}[ 7 ]{bos} Varyant\n{bred}[ 8 ]{bos} Güzelyalı\n{bred}[ 9 ]{bos} Küçükyalı\n{bred}[ 10 ]{bos} Karataş\n{bred}[ 11 ]{bos} Göztepe\n{bred}[ 12 ]{bos} Gaziemir Migros\n{bred}[ 13 ]{bos} Gaziemir Kipa Kavşağı\n{bred}[ 14 ]{bos} Marina Kavşağı\n{bred}[ 15 ]{bos} Mustafa Kemal Sahil Bulvarı\n{bred}[ 16 ]{bos} Karya Evleri\n{bred}[ 17 ]{bos} Gündogdu Meydanı\n{bred}[ 18 ]{bos} Demirköprü\n{bred}[ 19 ]{bos} Kahramanlar Kapısı\n{bred}[ 20 ]{bos} Buca Üçkuyular Meydanı\n{bred}[ 21 ]{bos} Uçanyol\n{bred}[ 22 ]{bos} Alsancak Gar\n{bred}[ 23 ]{bos} Karşıyaka Atatürk Anıtı\n{bred}[ 24 ]{bos} Seyrek Köprü\n{bred}[ 25 ]{bos} Konak Pier\n{bred}[ 26 ]{bos} Konak Diş Hastanesi\n{bred}[ 27 ]{bos} Şirinyer Koşu Yolu\n{bred}[ 28 ]{bos} Vakıflar Kavşağı\n{bred}[ 29 ]{bos} Montrö Meydanı\n{bred}[ 30 ]{bos} Yeşildere Caddesi\n{bred}[ 31 ]{bos} Adnan Kahveci Köprüsü\n{bred}[ 32 ]{bos} İkiçeşmelik\n{bred}[ 33 ]{bos} Meslek Fabrikası\n{bred}[ 34 ]{bos} Yeni Girne Kavşağı\n{bred}[ 35 ]{bos} Şemikler\n{bred}[ 36 ]{bos} Mavişehir Giriş\n{bred}[ 37 ]{bos} Atakent Kavşağı\n{bred}[ 38 ]{bos} Çiğli İtfaiye\n{bred}[ 39 ]{bos} Ekol Hastanesi\n{bred}[ 40 ]{bos} Egekent\n{bred}[ 41 ]{bos} Ata Sanayi Girişi\n{bred}[ 42 ]{bos} Serbest Bölge\n{bred}[ 43 ]{bos} Mürselpaşa Bulvarı\n{bred}[ 44 ]{bos} Basmane Kavşağı\n{bred}[ 45 ]{bos} Karşıyaka Naldöken Köprüsü\n{bred}[ 46 ]{bos} Zübeyde Hanım Kavşağı\n{bred}[ 47 ]{bos} Soğukkuyu Kavşağı\n{bred}[ 48 ]{bos} İzmir Arena\n{bred}[ 49 ]{bos} Bahçelerarası Köprü\n{bred}[ 50 ]{bos} Balçova Kipa\n{bred}[ 51 ]{bos} Maltepe Askeri Lisesi\n{bred}[ 52 ]{bos} Narlıdere Otoban\n{bred}[ 53 ]{bos} Narlıdere Folkart\n{bred}[ 54 ]{bos} Ege-Park Kavşağı\n{bred}[ 55 ]{bos} Bahçelerarası\n{bred}[ 56 ]{bos} Mirhatpaşa Endüstri Meslek\n{bred}[ 57 ]{bos} Fahrettin Altay Kavşağı\n{bred}[ 58 ]{bos} Denizmen Kavşağı\n{bred}[ 59 ]{bos} Hıfzısıhha Kavşağı\n{bred}[ 60 ]{bos} İslam Enstitüsü\n{bred}[ 61 ]{bos} Yeşilyurt Kavşağı\n{bred}[ 62 ]{bos} Üçyol Kavşağı\n{bred}[ 63 ]{bos} Gümrük Borsa\n{bred}[ 64 ]{bos} Tınaztepe Kavşağı\n{bred}[ 65 ]{bos} Çevikbir Meydanı\n{bred}[ 66 ]{bos} Köstence Köprüsü Kavşağı\n{bred}[ 67 ]{bos} Buca Heykel Kavşağı\n{bred}[ 68 ]{bos} Şirinyer Tapu\n{bred}[ 69 ]{bos} Yeşillik Caddesi | Buca Ayrımı\n{bred}[ 70 ]{bos} Eşrefpaşa\n{bred}[ 71 ]{bos} Melez Deltası\n{bred}[ 72 ]{bos} Bornova Hükümet Konağı\n{bred}[ 73 ]{bos} Bornova Stadyum Kavşağı\n{bred}[ 74 ]{bos} Migros Kavşağı\n{bred}[ 75 ]{bos} Otogar Kavşağı")
+		kambolge = str(input())
+		secilenkamera = izmirsehir[kambolge]
+		return secilenkamera
+	elif(kameraturu == 1 and sehirturu == 5):
+		print(f"{bred}[ 1 ]{bos} Akyazı Sahil\n{bred}[ 2 ]{bos} Sahil Fatsa 2\n{bred}[ 3 ]{bos} Sahil Fatsa 3\n{bred}[ 4 ]{bos} Atatürk Parkı")
+		kambolge = str(input())
+		secilenkamera = ordutrstk[kambolge]
+		return secilenkamera
+	elif(kameraturu == 2 and sehirturu == 5):
+		print(f"{bred}[ 1 ]{bos} İbrahim Fırtına Bulvarı 2\n{bred}[ 2 ]{bos} İbrahim Fırtına Bulvarı 3\n{bred}[ 3 ]{bos} Meydan Ulubey\n{bred}[ 4 ]{bos} Meydan Ulubey 2\n{bred}[ 5 ]{bos} Kent Meydanı | Perşembe\n{bred}[ 6 ]{bos} Belediye Meydanı | Perşembe\n{bred}[ 7 ]{bos} Fidangör 1\n{bred}[ 8 ]{bos} Fidangör 2\n{bred}[ 9 ]{bos} Fidangör 3\n{bred}[ 10 ]{bos} Fidangör 4\n{bred}[ 11 ]{bos} Fidangör 5\n{bred}[ 12 ]{bos} Fidangör 6\n{bred}[ 13 ]{bos} Fidangör 7\n{bred}[ 14 ]{bos} Fidangör 8\n{bred}[ 15 ]{bos} Fidangör 9\n{bred}[ 16 ]{bos} Fidangör 10")
+		kambolge = str(input())
+		secilenkamera = ordusehir[kambolge]
+		return secilenkamera
 
