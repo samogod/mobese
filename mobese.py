@@ -6,9 +6,9 @@ bred = Fore.RED + Style.BRIGHT
 red = Fore.RED
 bos = "\033[1;37m"
 z = """
-					Version 1.0.0
+					Version 1.0.1
 		[+] █████████████████████████████████████████████████████ [+]
-					  Coded by github.com/samet-g\n\n
+					  Coded by github.com/samogod\n\n
 """#dont edit or change that lines and nvm this shitty cog file.
 print("""
 		███╗   ███╗ ██████╗ ██████╗ ███████╗███████╗███████╗
